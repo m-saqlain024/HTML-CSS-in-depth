@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column; /* or column to stack them vertically */
+        justify-content: space-between; /* distribute items along the main axis with equal space */
+        align-items: center; /*center items along the cross axis
+        height: 200px; /* specify a height for the container */
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ddd;
+      }
+
+      .box1 {
+        background-color: #f00;
+      }
+
+      .box2 {
+        background-color: #0f0;
+      }
+
+      .box3 {
+        background-color: #00f;
+      }
+      .grid-item{
+        background-color: #ddd;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .grid-container{
+        display: grid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1" style="order: 1; flex-grow: 1">Box 1</div>
+      <div class="box box2" style="order: 3; flex-grow: 1">Box 2</div>
+      <div class="box box3" style="order: 2; flex-grow: 8">Box 3</div>
+    </div>
+    
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item" style="order:2">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>
+  </body>
+</html>
