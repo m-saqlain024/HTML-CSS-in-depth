@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slider in CSS</title>
+<style>
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slider__slides {
+  display: flex;
+  animation: slideAnimation 5s infinite;
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+}
+
+.slider__nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__nav label {
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.slider__nav label:hover {
+  background-color: #444;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+  
+  <ul class="slider__slides">
+    <li class="slider__slide">
+      <!-- Content for Slide 1 -->
+      <img src="portfolio-1.jpg" alt="Slide 1">
+      <h3>Slide 1</h3>
+      <p>Slide 1 description</p>
+    </li>
+    <li class="slider__slide">
+      <!-- Content for Slide 2 -->
+      <img src="portfolio-2.jpgg" alt="Slide 2">
+      <h3>Slide 2</h3>
+      <p>Slide 2 description</p>
+    </li>
+    <li class="slider__slide">
+      <!-- Content for Slide 3 -->
+      <img src="portfolio-4.jpg" alt="Slide 3">
+      <h3>Slide 3</h3>
+      <p>Slide 3 description</p>
+    </li>
+  </ul>
+  
+  <div class="slider__nav">
+    <label for="slide1">sdfsd</label>
+    <label for="slide2">asdfasdf</label>
+    <label for="slide3">sadfasdf</label>
+  </div>
+</div>
+
+
+</body>
+</html>
+
